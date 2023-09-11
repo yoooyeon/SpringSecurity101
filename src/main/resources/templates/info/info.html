@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인한 회원 정보</title>
+    <link rel="stylesheet" href="/css/basic.css">
+    <style>
+        /* 테이블 스타일 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3498db; /* 헤더 배경색을 수정합니다. */
+            color: white; /* 헤더 텍스트 색상을 수정합니다. */
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* 짝수 행 배경색을 수정합니다. */
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th>아이디 (ID)</th>
+        <th>이름 (Name)</th>
+        <th>이메일 (Email)</th>
+        <th>권한 (Role)</th>
+    </tr>
+    <tr>
+        <td th:text="${member.loginId}"></td>
+        <td th:text="${member.name}"></td>
+        <td th:text="${member.email}"></td>
+        <td th:text="${member.role}"></td>
+    </tr>
+</table>
+</body>
+</html>
