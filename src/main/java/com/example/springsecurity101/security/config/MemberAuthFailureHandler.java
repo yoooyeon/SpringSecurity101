@@ -19,7 +19,7 @@ public class MemberAuthFailureHandler extends SimpleUrlAuthenticationFailureHand
         // 세션에 실패 메세지 담기
         session.setAttribute("loginErrorMessage", exception.getMessage());
         // 로그인 실패시 이동할 페이지
-        setDefaultFailureUrl("/member/login/loginForm?error=true&t=h");
+        setDefaultFailureUrl("/member/login/login-form?error=true&t=h");
         // 로그인 실패시 이동할 페이지로 이동
         super.onAuthenticationFailure(request, response, exception);
     }

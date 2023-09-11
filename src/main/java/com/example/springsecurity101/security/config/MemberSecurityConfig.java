@@ -38,7 +38,7 @@ public class MemberSecurityConfig {
 
                         .and()// 로그인 페이지 설정
                         .formLogin()
-                        .loginPage("/member/login/loginForm") // 로그인 페이지 설정
+                        .loginPage("/member/login/login-form") // 로그인 페이지 설정
                         .loginProcessingUrl("/member/login/login") // 로그인 처리 URL 설정
                         .defaultSuccessUrl("/member/main") // 로그인 성공 후 이동할 페이지
                         .successHandler(new MemberAuthSuccessHandler()) // 로그인 성공 후 처리할 핸들러
@@ -48,7 +48,7 @@ public class MemberSecurityConfig {
                         .and()// 로그아웃 설정
                         .logout()
                         .logoutUrl("/logout") // 로그아웃 처리 URL 설정
-                        .logoutSuccessUrl("/member/login/loginForm?logout=1") // 로그아웃 성공 후 이동할 페이지
+                        .logoutSuccessUrl("/member/login/login-form?logout=1") // 로그아웃 성공 후 이동할 페이지
                         .deleteCookies("JSESSIONID"); // 로그아웃 후 쿠키 삭제
 
             } catch (Exception e) {

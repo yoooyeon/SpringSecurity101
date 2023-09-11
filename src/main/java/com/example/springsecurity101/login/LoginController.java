@@ -30,7 +30,7 @@ public class LoginController {
         return "main/main";
     }
 
-    @GetMapping("/member/login/loginForm")
+    @GetMapping("/member/login/login-form")
     public String login(HttpServletRequest request,
                         @AuthenticationPrincipal MemberPrincipalDetails memberPrincipalDetails) {
         HttpSession session = request.getSession();
