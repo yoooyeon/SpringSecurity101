@@ -34,8 +34,8 @@
    - 이름처럼 인증을 제공하는 역할이다.
    - 화면에서 사용자가 입력한 id와 pw로 db의 pw를 비교하여 인증한다.
    - 인증이 성공하면 UsernamePasswordAuthenticationToken를 반환한다.
-  
+   - 이 토큰은 SecurityContextHolder.getContext()에 저장된다.
 ### Authority와 Role의 차이점은?
 
 ### Access Token과 Refresh Token을 모두 사용하는 이유는?
-   - 이 토큰은 SecurityContextHolder.getContext()에 저장된다.
+   
