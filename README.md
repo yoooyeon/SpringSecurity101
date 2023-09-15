@@ -1,16 +1,18 @@
 # SpringSecurity101
 
-다음 블로그에 잘 정리되어 있어 참고했다. 나는 Spring Security 6.x 버전을 사용했다.
+다음 블로그에 잘 정리되어 있어 참고했다. 
+
+이 프로젝트에서는 Spring Security 6.x 버전을 사용했다.
 
 [\[ Spring Security \] 스프링 시큐리티 로그인 5.7이상 버전 \( 6.x 버전 \) \( JPA , 로그인 기억하기 \)](https://dev-log.tistory.com/4)
 
-기존 코드에서 일부를 수정했다.
+## 기존 코드에서 수정한 내용
 1. MemberPrincipalDetails를 record로 변경
 2. Member 클래스에 불필요한 컬럼 제거
 3. controller의 url
 4. 화면 디자인
 
-추가할 기능은 다음과 같다.
+## 추가 할 기능
 1. admin 권한을 만들어 역할 구분하기
 2. jwt 토큰 관리하기
     - access token, refresh token 으로 나눈다.
@@ -19,7 +21,7 @@
 
 
 
-Spring Security를 활용하여 로그인을 구현하기 요약
+## Spring Security를 활용하여 로그인을 구현 정리
 1. SecurityConfig 파일 생성
 2. SecurityFilterChain을 반환하는 빈 생성
    - login, logout 페이지 설정 
