@@ -15,7 +15,7 @@ public record MemberPrincipalDetails(Member member) implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() { // 계정 권한
         List<GrantedAuthority> authorities = new ArrayList<>();
-        authorities.add(new SimpleGrantedAuthority(member.getRole()));
+        authorities.add(new SimpleGrantedAuthority("ROLE_"+member.getRole().toString()));
         return authorities;
     }
 
