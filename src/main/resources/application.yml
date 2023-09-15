@@ -20,7 +20,13 @@ spring:
     properties:
       hibernate:
         format_sql: true
-
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql: trace
 jwt:
   secret-key: c2VydmVyLWJhY2tlbmQtc2VydmVyLWFzZGZhc2RnZXdya2plbGdhaW9kdS15b295ZW9uLXRhbGtlbi1iYWNrZW5kCg==
   expiration: 120000
