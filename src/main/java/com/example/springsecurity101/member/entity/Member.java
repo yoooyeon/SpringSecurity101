@@ -1,11 +1,10 @@
 package com.example.springsecurity101.member.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import lombok.*;
 
+@Builder
 @Entity
 @Getter
 @Setter
@@ -15,13 +14,13 @@ import lombok.*;
 public class Member {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
-    @Email
-    private String email;
     private String loginId;
     private String password;
-    private String role;
+    @Enumerated(value = EnumType.STRING)
+    private MemberType role;
+    private String phone;
 
 }
