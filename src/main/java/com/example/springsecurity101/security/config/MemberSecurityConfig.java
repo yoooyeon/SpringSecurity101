@@ -31,11 +31,10 @@ public class MemberSecurityConfig {
         http.authorizeHttpRequests(authorize -> {
             try {
                 authorize
-                        .requestMatchers("/css/**", "/images/**", "/js/**", "/member/login/**")
+                        .requestMatchers("/css/**", "/images/**", "/js/**", "/member/login/**","/member/join")
                         .permitAll() // 위 경로는 인증 없이 접근 가능
                         .requestMatchers("/member/**")
-                        .hasRole("MEMBER") // 위 경로 접근 시 Role에 MEMBER가 포함되어야 함
-
+                        .hasAnyRole("MENTOR","MENTEE")
                         .and()// 로그인 페이지 설정
                         .formLogin()
                         .loginPage("/member/login/login-form") // 로그인 페이지 설정
